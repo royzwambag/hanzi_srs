@@ -1,3 +1,6 @@
 class HomeController < ApplicationController
-  def index; end
+  def index
+    @character = Character.first
+    @character2 = "nǐ"
+  end
 end

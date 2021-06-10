@@ -10,9 +10,32 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 2021_06_10_163058) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "characters", force: :cascade do |t|
+    t.string "value"
+    t.string "pinyin"
+    t.string "english_translation"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "characters_phrases", id: false, force: :cascade do |t|
+    t.bigint "character_id"
+    t.bigint "phrase_id"
+    t.index ["character_id"], name: "index_characters_phrases_on_character_id"
+    t.index ["phrase_id"], name: "index_characters_phrases_on_phrase_id"
+  end
+
+  create_table "phrases", force: :cascade do |t|
+    t.string "value"
+    t.string "pinyin"
+    t.string "english_translation"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
 
 end
