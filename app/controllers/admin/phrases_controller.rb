@@ -16,7 +16,7 @@ module Admin
       @phrase = Phrase.new(phrase_params)
 
       if @phrase.save
-        redirect_to @phrase
+        redirect_to [:admin, @phrase]
       else
         render :new, status: :unprocessable_entity
       end
@@ -30,7 +30,7 @@ module Admin
       @phrase = Phrase.find(params[:id])
 
       if @phrase.update(phrase_params)
-        redirect_to @phrase
+        redirect_to [:admin, @phrase]
       else
         render :edit, status: :unprocessable_entity
       end
@@ -38,13 +38,9 @@ module Admin
 
     def destroy
       @phrase = Phrase.find(params[:id])
+      @phrase.destroy
 
-      if @phrase.destroy
-        render action: "index"
-      else
-        # TODO: Show errors
-        redirect_to @phrase
-      end
+      redirect_to action: :index
     end
 
     private
