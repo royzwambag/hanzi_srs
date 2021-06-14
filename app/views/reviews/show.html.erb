@@ -10,8 +10,8 @@
 // TODO: Integrate nicely with hotwire
 document.addEventListener("turbo:load", function(event) {
   var writer = window.HanziWriter.create('character-target-div', '<%= @review.character.value %>', {
-    width: 100,
-    height: 100,
+    width: 250,
+    height: 250,
     padding: 5
   });
 
@@ -38,7 +38,8 @@ document.addEventListener("turbo:load", function(event) {
   function stopQuiz(passed) {
     writer.cancelQuiz();
     writer.showCharacter();
-    writer.updateColor('outlineColor', passed ? '#008000' : '#FF0000');
+    writer.updateColor('radicalColor', passed ? '#008000' : '#FF0000');
+    writer.updateColor('strokeColor', passed ? '#008000' : '#FF0000');
     setQuizCorrectParameter(passed);
     showNextButton();
   }
