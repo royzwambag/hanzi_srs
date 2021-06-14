@@ -200,9 +200,8 @@ GEM
     stackprof (0.2.17)
     thor (1.1.0)
     tilt (2.0.10)
-    turbolinks (5.2.1)
-      turbolinks-source (~> 5.2)
-    turbolinks-source (5.2.0)
+    turbo-rails (0.5.11)
+      rails (>= 6.0.0)
     tzinfo (2.0.4)
       concurrent-ruby (~> 1.0)
     web-console (4.1.0)
@@ -247,7 +246,7 @@ DEPENDENCIES
   sidekiq
   spring
   stackprof
-  turbolinks (~> 5)
+  turbo-rails
   tzinfo-data
   web-console (>= 4.1.0)
   webdrivers
