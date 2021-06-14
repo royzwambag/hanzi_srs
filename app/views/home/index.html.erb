@@ -1,15 +1,2 @@
-<%= content_for(:javascript_tags) do %>
-  <%= javascript_include_tag("https://cdn.jsdelivr.net/npm/hanzi-writer@3.0/dist/hanzi-writer.min.js") %>
-<% end %>
-
-<div id="character-target-div"></div>
-
-<script>
-document.addEventListener("turbolinks:load", function(event) {
-  var writer = window.HanziWriter.create('character-target-div', '<%= @character.value %>', {
-    width: 100,
-    height: 100,
-    padding: 5
-  });
-})
-</script>
+<br />
+<%= button_to "Reviews", review_index_path, id: "open-contacts-dialog-btn", class: "inbox-sf-add-btn tip", method: :get %>

@@ -1,0 +1,5 @@
+<% if @reviews.any? %>
+  <% @reviews.each do |review| %>
+    <%= link_to("Review #{review.character.value}", review) %>
+  <% end %>
+<% end%>
