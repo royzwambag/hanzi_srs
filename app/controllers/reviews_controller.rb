@@ -12,9 +12,12 @@ class ReviewsController < ApplicationController
     @review = Review.find(params[:id])
     correct_repetitions = quiz_correct? ? @review.correct_repetitions + 1 : @review.correct_repetitions - 1
 
-    @review.update(correct_repetitions: correct_repetitions, last_review: DateTime.now)
-
-    redirect_to @review
+    if @review.update(correct_repetitions: correct_repetitions, last_review: DateTime.now)
+      redirect_to @review
+    else
+      # TODO: Show errors
+      render :show
+    end
   end
 
   private

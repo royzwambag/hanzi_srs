@@ -8,7 +8,7 @@ class SrsService
   end
 
   def next_review
-    # TODO: calculate next review
+    # TODO: calculate next review with SRS algorithm
     return DateTime.tomorrow
   end
 end
