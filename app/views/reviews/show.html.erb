@@ -3,14 +3,11 @@
   <%= javascript_include_tag("https://cdn.jsdelivr.net/npm/hanzi-writer@3.0/dist/hanzi-writer.min.js") %>
 <% end %>
 
-<%= form_with(model: @review, method: :patch) do |form| %>
-  <div id="character-target-div"></div>
-  <%= form.hidden_field(:quiz_correct, value: false) %>
-  <%= form.submit("Next review", id: "nextButton", style: "display: none;") %>
-<% end %>
+<%= render partial: "review" %>
 
 <script>
 // TODO: move this to it's own .js file
+// TODO: Integrate nicely with hotwire
 document.addEventListener("turbo:load", function(event) {
   var writer = window.HanziWriter.create('character-target-div', '<%= @review.character.value %>', {
     width: 100,
@@ -28,7 +25,6 @@ document.addEventListener("turbo:load", function(event) {
     writer.hideOutline();
     writer.quiz({
       onMistake: function(strokeData) {
-        debugger
         if(strokeData.totalMistakes >= 5) {
           stopQuiz(false);
         }

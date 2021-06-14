@@ -1,0 +1,7 @@
+<%= turbo_frame_tag "review" do %>
+  <%= form_with(model: @review, method: :patch) do |form| %>
+    <div id="character-target-div"></div>
+    <%= form.hidden_field(:quiz_correct, value: false) %>
+    <%= form.submit("Next review", id: "nextButton", style: "display: none;") %>
+  <% end %>
+<% end %>

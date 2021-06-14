@@ -1,4 +1,4 @@
-class ReviewController < ApplicationController
+class ReviewsController < ApplicationController
   def index
     # TODO: Scope on user
     @reviews = Review.all
@@ -9,7 +9,6 @@ class ReviewController < ApplicationController
   end
 
   def update
-    binding.pry
     @review = Review.find(params[:id])
     correct_repetitions = quiz_correct? ? @review.correct_repetitions + 1 : @review.correct_repetitions - 1
 
