@@ -9,6 +9,6 @@ class SrsService
 
   def next_review
     # TODO: calculate next review
-    return DateTime.now
+    return DateTime.tomorrow
   end
 end

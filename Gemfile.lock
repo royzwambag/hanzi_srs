@@ -153,6 +153,7 @@ GEM
       ffi (~> 1.0)
     redis (4.2.5)
     regexp_parser (2.1.1)
+    rexml (3.2.5)
     rspec-core (3.10.1)
       rspec-support (~> 3.10.0)
     rspec-expectations (3.10.1)
@@ -200,6 +201,7 @@ GEM
     stackprof (0.2.17)
     thor (1.1.0)
     tilt (2.0.10)
+    timecop (0.9.4)
     turbo-rails (0.5.11)
       rails (>= 6.0.0)
     tzinfo (2.0.4)
@@ -241,12 +243,14 @@ DEPENDENCIES
   rack-mini-profiler (~> 2.0)
   rails (~> 6.1.3, >= 6.1.3.2)
   redis (~> 4.0)
+  rexml
   rspec-rails (~> 5.0.0)
   sass-rails (>= 6)
   selenium-webdriver
   sidekiq
   spring
   stackprof
+  timecop
   turbo-rails
   tzinfo-data
   web-console (>= 4.1.0)
