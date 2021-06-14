@@ -97,6 +97,7 @@ GEM
     mail (2.7.1)
       mini_mime (>= 0.1.1)
     marcel (1.0.1)
+    memory_profiler (1.0.0)
     method_source (1.0.0)
     mini_mime (1.0.3)
     minitest (5.14.4)
@@ -178,6 +179,7 @@ GEM
       actionpack (>= 4.0)
       activesupport (>= 4.0)
       sprockets (>= 3.0.0)
+    stackprof (0.2.17)
     thor (1.1.0)
     tilt (2.0.10)
     turbolinks (5.2.1)
@@ -215,6 +217,7 @@ DEPENDENCIES
   capybara (>= 3.26)
   jbuilder (~> 2.7)
   listen (~> 3.3)
+  memory_profiler
   pg (~> 1.1)
   pry
   puma (~> 5.0)
@@ -224,6 +227,7 @@ DEPENDENCIES
   selenium-webdriver
   sidekiq
   spring
+  stackprof
   turbolinks (~> 5)
   tzinfo-data
   web-console (>= 4.1.0)
