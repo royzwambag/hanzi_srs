@@ -13,6 +13,8 @@ class ReviewsController < ApplicationController
     correct_repetitions = quiz_correct? ? @review.correct_repetitions + 1 : @review.correct_repetitions - 1
 
     @review.update(correct_repetitions: correct_repetitions, last_review: DateTime.now)
+
+    redirect_to @review
   end
 
   private
