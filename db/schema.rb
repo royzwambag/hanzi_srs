@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_06_10_163854) do
+ActiveRecord::Schema.define(version: 2021_06_14_110314) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -45,8 +45,8 @@ ActiveRecord::Schema.define(version: 2021_06_10_163854) do
     t.bigint "phrase_id"
     t.datetime "last_review"
     t.datetime "next_review"
-    t.integer "correct_repetitions"
-    t.decimal "easiness_factor"
+    t.integer "correct_repetitions", default: 0
+    t.decimal "easiness_factor", default: "1.0"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["character_id"], name: "index_reviews_on_character_id"
