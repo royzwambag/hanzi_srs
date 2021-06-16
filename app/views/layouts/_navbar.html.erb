@@ -1,0 +1,35 @@
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div id="navbarBasicExample" class="navbar-menu">
+    <div class="navbar-start">
+      <%= link_to "Home", root_path, class: "navbar-item" %>
+
+      <%= link_to "Reviews", reviews_path, class: "navbar-item" %>
+
+      <% if true # TODO: current_user.admin? %>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link">
+            Admin
+          </a>
+          <div class="navbar-dropdown is-boxed">
+              <%= link_to "Edit characters", admin_characters_path, class: "navbar-item" %>
+
+              <%= link_to "Edit phrases", admin_phrases_path, class: "navbar-item" %>
+          </div>
+        </div>
+      <% end %>
+    </div>
+
+    <div class="navbar-end">
+      <div class="navbar-item">
+        <div class="buttons">
+          <a class="button is-primary">
+            <strong>Sign up</strong>
+          </a>
+          <a class="button is-light">
+            Log in
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
