@@ -1,8 +1,7 @@
 <nav class="navbar" role="navigation" aria-label="main navigation">
-  <div id="navbarBasicExample" class="navbar-menu">
+  <div class="navbar-menu">
     <div class="navbar-start">
       <%= link_to "Home", root_path, class: "navbar-item" %>
-
       <%= link_to "Reviews", reviews_path, class: "navbar-item" %>
 
       <% if true # TODO: current_user.admin? %>
@@ -11,9 +10,8 @@
             Admin
           </a>
           <div class="navbar-dropdown is-boxed">
-              <%= link_to "Edit characters", admin_characters_path, class: "navbar-item" %>
-
-              <%= link_to "Edit phrases", admin_phrases_path, class: "navbar-item" %>
+            <%= link_to "Edit characters", admin_characters_path, class: "navbar-item" %>
+            <%= link_to "Edit phrases", admin_phrases_path, class: "navbar-item" %>
           </div>
         </div>
       <% end %>
