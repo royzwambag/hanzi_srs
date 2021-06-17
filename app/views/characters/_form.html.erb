@@ -1,30 +1,62 @@
 <%= form_with(model: character) do |form| %>
-  <div>
-    <%= form.label :value %><br>
-    <%= form.text_field :value %>
-    <% character.errors.full_messages_for(:value).each do |message| %>
-      <div><%= message %></div>
-    <% end %>
+  <div class="field is-horizontal">
+    <div class="field-label is-small">
+      <%= form.label :value %><br>
+    </div>
+    <div class="field-body">
+      <div class="field">
+        <p class="control">
+          <%= form.text_field(:value, class: "input is-small") %>
+          <% character.errors.full_messages_for(:value).each do |message| %>
+            <div><%= message %></div>
+          <% end %>
+        </p>
+      </div>
+    </div>
   </div>
 
-  <div>
-    <%= form.label :pinyin %><br>
-    <%= form.text_field :pinyin %><br>
-    <% character.errors.full_messages_for(:pinyin).each do |message| %>
-      <div><%= message %></div>
-    <% end %>
+  <div class="field is-horizontal">
+    <div class="field-label is-small">
+      <%= form.label :pinyin %><br>
+    </div>
+    <div class="field-body">
+      <div class="field">
+        <p class="control">
+          <%= form.text_field(:pinyin, class: "input is-small") %><br>
+          <% character.errors.full_messages_for(:pinyin).each do |message| %>
+            <div><%= message %></div>
+          <% end %>
+        </p>
+      </div>
+    </div>
   </div>
 
-  <div>
-    <%= form.label :english_translation %><br>
-    <%= form.text_field :english_translation %><br>
-    <% character.errors.full_messages_for(:english_translation).each do |message| %>
-      <div><%= message %></div>
-    <% end %>
+  <div class="field is-horizontal">
+    <div class="field-label is-small">
+      <%= form.label :english_translation %><br>
+    </div>
+    <div class="field-body">
+      <div class="field">
+        <p class="control">
+          <%= form.text_field(:english_translation, class: "input is-small") %><br>
+          <% character.errors.full_messages_for(:english_translation).each do |message| %>
+            <div><%= message %></div>
+          <% end %>
+        </p>
+      </div>
+    </div>
   </div>
 
-  <br />
-  <div>
-    <%= form.submit %>
+  <div class="field is-horizontal">
+    <div class="field-label is-small">
+      <!-- Left empty for spacing -->
+    </div>
+    <div class="field-body is-small">
+      <div class="field">
+        <div class="control">
+          <%= form.submit(class: "button is-success is-small") %>
+        </div>
+      </div>
+    </div>
   </div>
 <% end %>
