@@ -5,8 +5,8 @@ Rails.application.routes.draw do
 
   resources :reviews, only: [:index, :show, :update] 
 
-  resources :characters, except: [:show]
-  resources :phrases, except: [:show]
+  resources :characters
+  resources :phrases
   
   mount Sidekiq::Web => "/sidekiq"
 end
