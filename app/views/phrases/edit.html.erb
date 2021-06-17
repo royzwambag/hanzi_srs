@@ -1,3 +1,5 @@
 <h1>Edit Phrase</h1>
 
-<%= render "form", phrase: @phrase %>
+<%= turbo_frame_tag "phrase_form" do %>
+  <%= render "form", phrase: @phrase %>
+<% end %>

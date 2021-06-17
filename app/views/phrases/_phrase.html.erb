@@ -1,0 +1,7 @@
+<%= turbo_frame_tag dom_id(phrase) do %>
+  <div class="box">
+    <%= turbo_frame_tag "phrase_form" do %>
+      <%= link_to("Phrase #{phrase.value}", edit_phrase_path(phrase)) %>
+    <% end %>
+  </div>
+<% end %>
