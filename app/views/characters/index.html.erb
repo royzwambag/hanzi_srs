@@ -4,6 +4,9 @@
 <% end %>
 
 <br />
+
 <div class="box">
-  <%= link_to "Create new character", new_character_path, class: "button is-success" %>
+  <%= turbo_frame_tag "character_form" do %>
+    <%= link_to "Create new character", new_character_path, class: "button is-success" %>
+  <% end %>
 </div>

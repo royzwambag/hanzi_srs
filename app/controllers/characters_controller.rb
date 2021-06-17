@@ -7,10 +7,6 @@ class CharactersController < ApplicationController
     @character = Character.new
   end
 
-  def show
-    @character = Character.find(params[:id])
-  end
-
   def create
     @character = Character.new(character_params)
 
