@@ -1,9 +1,0 @@
-<h1><%= @character.value %></h1>
-
-<%= @character.pinyin %>
-<%= @character.english_translation %>
-
-<ul>
-  <li><%= link_to "Edit", edit_admin_character_path(@character) %></li>
-  <li><%= link_to "Destroy", admin_character_path(@character), method: :delete, data: { confirm: "Are you sure?" } %></li>
-</ul>

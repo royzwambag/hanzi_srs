@@ -1,8 +1,8 @@
-<%= form_with(model: [:admin, phrase]) do |form| %>
+<%= form_with(model: character) do |form| %>
   <div>
     <%= form.label :value %><br>
     <%= form.text_field :value %>
-    <% phrase.errors.full_messages_for(:value).each do |message| %>
+    <% character.errors.full_messages_for(:value).each do |message| %>
       <div><%= message %></div>
     <% end %>
   </div>
@@ -10,7 +10,7 @@
   <div>
     <%= form.label :pinyin %><br>
     <%= form.text_field :pinyin %><br>
-    <% phrase.errors.full_messages_for(:pinyin).each do |message| %>
+    <% character.errors.full_messages_for(:pinyin).each do |message| %>
       <div><%= message %></div>
     <% end %>
   </div>
@@ -18,7 +18,7 @@
   <div>
     <%= form.label :english_translation %><br>
     <%= form.text_field :english_translation %><br>
-    <% phrase.errors.full_messages_for(:english_translation).each do |message| %>
+    <% character.errors.full_messages_for(:english_translation).each do |message| %>
       <div><%= message %></div>
     <% end %>
   </div>

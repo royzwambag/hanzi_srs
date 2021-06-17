@@ -5,4 +5,6 @@ class Character < ApplicationRecord
   validates_presence_of :value
   validates_presence_of :pinyin
   validates_presence_of :english_translation
+
+  after_create_commit { broadcast_append_to "characters" }
 end

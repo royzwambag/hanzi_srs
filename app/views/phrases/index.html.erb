@@ -1,0 +1,9 @@
+<% if @phrases %>
+  <ul>
+  <% @phrases.each do |phrase| %>
+    <li><%= link_to("Character #{phrase.value}", phrase_path(phrase)) %></li>
+  <% end %>
+  </ul>
+<% end%>
+
+<%= link_to "Create new phrase", new_phrase_path %>

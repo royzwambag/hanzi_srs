@@ -1,0 +1,6 @@
+<%= turbo_frame_tag "characters" do %>
+  <%= render @characters %>
+<% end %>
+<%= turbo_stream_from "characters" %>
+
+<%= link_to "Create new character", new_character_path %>

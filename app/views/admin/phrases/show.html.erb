@@ -1,9 +1,0 @@
-<h1><%= @phrase.value %></h1>
-
-<%= @phrase.pinyin %>
-<%= @phrase.english_translation %>
-
-<ul>
-  <li><%= link_to "Edit", edit_admin_phrase_path(@phrase) %></li>
-  <li><%= link_to "Destroy", admin_phrase_path(@phrase), method: :delete, data: { confirm: "Are you sure?" } %></li>
-</ul>

@@ -1,9 +1,0 @@
-<% if @characters %>
-  <ul>
-  <% @characters.each do |character| %>
-    <li><%= link_to("Character #{character.value}", admin_character_path(character)) %></li>
-  <% end %>
-  </ul>
-<% end%>
-
-<%= link_to "Create new character", new_admin_character_path %>

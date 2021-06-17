@@ -5,10 +5,8 @@ Rails.application.routes.draw do
 
   resources :reviews, only: [:index, :show, :update] 
 
-  namespace :admin do
-    resources :characters
-    resources :phrases
-  end
+  resources :characters
+  resources :phrases
   
   mount Sidekiq::Web => "/sidekiq"
 end
