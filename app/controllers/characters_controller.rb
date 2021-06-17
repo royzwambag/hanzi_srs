@@ -15,7 +15,6 @@ class CharactersController < ApplicationController
     @character = Character.new(character_params)
 
     if @character.save
-      redirect_to @character
     else
       render :new, status: :unprocessable_entity
     end

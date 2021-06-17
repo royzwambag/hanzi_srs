@@ -15,7 +15,6 @@ class PhrasesController < ApplicationController
     @phrase = Phrase.new(phrase_params)
 
     if @phrase.save
-      redirect_to @phrase
     else
       render :new, status: :unprocessable_entity
     end

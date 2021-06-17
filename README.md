@@ -5,3 +5,4 @@
 - Quiz feedback
 - Specs
 - Hotwire
+- - Clear form after submitting
