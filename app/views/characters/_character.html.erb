@@ -1,2 +1,5 @@
-<%= link_to("Character #{character.value}", character_path(character)) %>
-<br />
+<%= turbo_frame_tag dom_id(character) do %>
+  <div class="box">
+    <%= link_to("Character #{character.value}", character_path(character)) %>
+  </div>
+<% end %>

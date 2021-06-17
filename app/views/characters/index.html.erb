@@ -1,6 +1,9 @@
 <%= turbo_frame_tag "characters" do %>
   <%= render @characters %>
-<% end %>
 <%= turbo_stream_from "characters" %>
+<% end %>
 
-<%= link_to "Create new character", new_character_path %>
+<br />
+<div class="box">
+  <%= link_to "Create new character", new_character_path, class: "button is-success" %>
+</div>
