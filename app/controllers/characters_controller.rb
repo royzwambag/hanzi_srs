@@ -1,5 +1,6 @@
 class CharactersController < ApplicationController
   def index
+    # TODO: pagination
     @characters = Character.all
   end
 
