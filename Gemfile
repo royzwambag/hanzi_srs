@@ -48,6 +48,10 @@ group :development, :test do
 end
 
 group :development do
+  # Benchmarking
+  gem 'benchmark-memory', git: 'https://github.com/michaelherold/benchmark-memory', ref: '5e81f4720aa815b4d3d9efb2ae4efe603e949fb9' 
+  gem 'benchmark-ips'
+
   gem 'pry'
   # Access an interactive console on exception pages or by calling 'console' anywhere in the code.
   gem 'web-console', '>= 4.1.0'

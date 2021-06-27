@@ -1,3 +1,11 @@
+GIT
+  remote: https://github.com/michaelherold/benchmark-memory
+  revision: 5e81f4720aa815b4d3d9efb2ae4efe603e949fb9
+  ref: 5e81f4720aa815b4d3d9efb2ae4efe603e949fb9
+  specs:
+    benchmark-memory (0.1.2)
+      memory_profiler (~> 1)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -62,6 +70,7 @@ GEM
       zeitwerk (~> 2.3)
     addressable (2.7.0)
       public_suffix (>= 2.0.2, < 5.0)
+    benchmark-ips (2.9.1)
     bindex (0.8.1)
     bootsnap (1.7.5)
       msgpack (~> 1.0)
@@ -231,6 +240,8 @@ PLATFORMS
   x86_64-linux
 
 DEPENDENCIES
+  benchmark-ips
+  benchmark-memory!
   bootsnap (>= 1.4.4)
   byebug
   capybara (>= 3.26)
